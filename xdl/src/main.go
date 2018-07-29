@@ -1,10 +1,9 @@
 package main
 
-import "fmt"
+import "day05"
 
 func main() {
 	//day03.StandIO()
-	/*fmt.Printf("%b", 2)
-	fmt.Println(2<<62)*/
-	fmt.Println(22 << 59)
+
+	day05.MultTable()
 }
