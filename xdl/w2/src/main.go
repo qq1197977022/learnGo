@@ -9,4 +9,6 @@ func main() {
 	//day05.BigToSmallInt()
 	day05.Parse()
 	day05.Format()
+
+	day05.Variadic()
 }
