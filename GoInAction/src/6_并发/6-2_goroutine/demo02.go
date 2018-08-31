@@ -16,7 +16,7 @@ func main() {
 	go printPrime1("A")
 	go printPrime1("B")
 
-	wg1.Wait() //阻塞, 直到WaitGroup计数=0, 即所有goroutine完成, 避免goroutine在在有机会执行前main函数返回
+	wg1.Wait() //阻塞, 直到WaitGroup计数=0, 即所有goroutine完成, 避免goroutine在有机会执行前main函数返回
 }
 
 func printPrime1(prefix string) {

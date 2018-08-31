@@ -16,7 +16,7 @@ func BenchmarkSprintf(b *testing.B) {
 	*/
 
 	for i := 0; i < b.N; i++ {
-		fmt.Sprintf("%d", num) //被测函数
+		_ = fmt.Sprintf("%d", num) //被测函数
 	}
 }
 
@@ -26,7 +26,7 @@ func BenchmarkFormat(b *testing.B) {
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
-		strconv.FormatInt(num, 10) //被测函数
+		_ = strconv.FormatInt(num, 10) //被测函数
 	}
 }
 
@@ -36,7 +36,7 @@ func BenchmarkItoa(b *testing.B) {
 	b.ResetTimer()
 
 	for i := 0; i < b.N; i++ {
-		strconv.Itoa(num) //被测函数
+		_ = strconv.Itoa(num) //被测函数
 	}
 }
 

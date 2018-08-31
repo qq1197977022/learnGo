@@ -1,21 +1,17 @@
 package main
 
-import (
-	"io"
-	"log"
-	"net/http"
-	"os"
-)
-
 func main() {
-	//url := "http://route.showapi.com/1196-2?showapi_appid=72961&showapi_sign=764746e5747045d28bd9e0855212e9e0&keyword=揠苗助长"
-	url := "http://route.showapi.com/1196-1?showapi_appid=72961&showapi_sign=764746e5747045d28bd9e0855212e9e0&keyword=东"
-	if resp, err := http.Get(url); err != nil {
-		log.Fatalln(err)
-	} else {
-		defer resp.Body.Close()
-		if _, err := io.Copy(os.Stdout, resp.Body); err != nil {
-			log.Fatalln(err)
-		}
-	}
+	//day01.DataFetchParse()
+
+	/*
+		go day02.Goroutine1()
+		runtime.Goexit()
+
+		1.main函数所在goroutine终止, 但没有返回, 所以其他goroutine正常执行
+		2.若此时其他goroutine均终止而不是返回, 则程序崩溃
+		3.即使其他goroutine正常返回程序依然崩溃*/
+
+	//day03.CloseChan()
+	//day03.Timer()
+	//day03.Ticker()
 }

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	nBefore := runtime.GOMAXPROCS(1) //设置GO运行时调度器可的用最大逻辑CPU数: 把该逻辑CPU分配到某个物理CPU: 给每个物理CPU分配一个逻辑CPU runtime.GOMAXPROCS(runtime.NumCPU())
+	nBefore := runtime.GOMAXPROCS(1) //设置GO运行时调度器可的用最大逻辑CPU数: 把该逻辑CPU分配到某个物理CPU: 给每个物理CPU分配一个逻辑CPU runtime.GOMAXPROCS(runtime.NumCPU()), 即默认状态
 	fmt.Println(nBefore)             //之前逻辑CPU数
 	fmt.Println(runtime.NumCPU())    //获取当前线程可用逻辑CPU数
 
@@ -41,7 +41,7 @@ func main() {
 		}
 	}()
 
-	wg.Wait() //阻塞, 直到WaitGrou计数=0, 即所有goroutine结束, 避免main函数在goroutine有机会执行前返回
+	wg.Wait() //阻塞, 直到WaitGroup计数=0, 即所有goroutine结束, 避免main函数在goroutine有机会执行前返回
 
 	fmt.Println("程序结束!")
 }
