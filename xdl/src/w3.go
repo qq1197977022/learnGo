@@ -1,5 +1,12 @@
 package main
 
+import (
+	"log"
+)
+
+func init() {
+	log.SetFlags(log.Lshortfile)
+}
 func main() {
 	//day01.DataFetchParse()
 
@@ -14,4 +21,5 @@ func main() {
 	//day03.CloseChan()
 	//day03.Timer()
 	//day03.Ticker()
+	//demo10_UDP通信.UDPConn()
 }
